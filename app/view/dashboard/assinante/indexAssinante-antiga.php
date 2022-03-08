@@ -24,54 +24,48 @@ $assinantes = $dao->consultarAssinantes();
     <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
-<body class="bodyFundo">
+<body>
 <?php include("../../includes/sidebarAdmin.php"); ?>
-<div>
-    <div class="py-5">
-        <div class="container">
-            <div class="d-flex flex-column">
-                <div>
-                    <div class="container-fluid">
-                        <h1 class="text-light mb-4">Leads</h1>
-                        <div class="card text-light bg-light shadow">
-                            <div class="card-header py-3">
-                                <p class="text-primary m-0 fw-bold">Assinantes</p>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
-                                    <table class="table my-0 text-black" id="dataTable">
-                                        <thead class="text-uppercase">
-                                        <tr>
-                                            <th scope="col">Id</th>
-                                            <th scope="col">Nome</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">Telefone</th>
-                                            <th scope="col">Mensagem</th>
-                                            <th scope="col">Interesse</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <?php foreach ($assinantes as $assinante): ?>
-                                            <tr class="mb-4">
-                                                <th><?php echo $assinante['idAssinante'] ?></th>
-                                                <td><?php echo $assinante['nomeAssinante'] ?></td>
-                                                <td><?php echo $assinante['emailAssinante'] ?></td>
-                                                <td><?php echo $assinante['telefoneAssinante'] ?></td>
-                                                <td><?php echo substr($assinante['mensagemAssinante'], 0, 50) ?> ...</td>
-                                                <td><?php echo $assinante['interesseAssinante'] ?></td>
-                                            </tr>
-                                        <?php endforeach; ?>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div class="py-5">
+    <div class="container">
+        <div class="row mb-3">
+            <div>
+                <h1 class="text-dark">Leads</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="text-uppercase">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Mensagem</th>
+                            <th scope="col">Interesse</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($assinantes as $assinante): ?>
+                            <tr class="mb-4">
+                                <th><?php echo $assinante['idAssinante'] ?></th>
+                                <td><?php echo $assinante['nomeAssinante'] ?></td>
+                                <td><?php echo $assinante['emailAssinante'] ?></td>
+                                <td><?php echo $assinante['telefoneAssinante'] ?></td>
+                                <td><?php echo substr($assinante['mensagemAssinante'], 0, 50) ?> ...</td>
+                                <td><?php echo $assinante['interesseAssinante'] ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+
     <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
             <img src="..." class="rounded me-2" alt="...">

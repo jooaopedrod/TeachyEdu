@@ -20,7 +20,6 @@ if (isset($_GET['delete_id'])) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,54 +30,52 @@ if (isset($_GET['delete_id'])) {
     <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
-<body class="bodyFundo">
+<body>
 <?php include("../../includes/sidebarAdmin.php"); ?>
-<div>
-    <div class="py-5">
-        <div class="container">
-            <div class="d-flex flex-column">
-                <div>
-                    <div class="container-fluid">
-                        <h1 class="text-light mb-4">Eventos</h1>
-                        <div class="card text-light bg-light shadow">
-                            <div class="card-header py-3">
-                                <a class="btn btn-primary" href="FormAgenda.php">Cadastrar novo</a>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
-                                    <table class="table my-0 text-black" id="dataTable">
-                                        <thead class="text-uppercase">
-                                        <tr>
-                                            <th scope="col">Id</th>
-                                            <th scope="col">Título</th>
-                                            <th scope="col">Capa</th>
-                                            <th scope="col">Data do evento</th>
-                                            <th scope="col">Descrição</th>
-                                            <th scope="col">Editor</th>
-                                            <th scope="col">Editar / Remover</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <?php foreach ($agendas as $agenda): ?>
-                                            <tr class="mb-4">
-                                                <th><?php echo $agenda['idAgenda'] ?></th>
-                                                <td><?php echo $agenda['tituloAgenda'] ?></td>
-                                                <td> <img src="../../../../public/images/agenda/<?php echo $agenda['imagemAgenda'] ?>" width="50px" alt=""></td>
-                                                <td><?php echo date('d/m/Y H:s', strtotime($agenda['dataHoraAgenda'])); ?></td>
-                                                <td><?php echo substr($agenda['descricaoAgenda'], 0, 50) ?>...</td>
-                                                <td><?php echo $agenda['autorAgenda'] ?></td>
-                                                <td>
-                                                    <a style="text-decoration: none" href="FormAgenda.php?update_id=<?php echo $agenda['idAgenda'] ?>" class="btn btn-success fa fa-pencil"></a>
-                                                    <a style="text-decoration: none" data-toggle="modal" data-target="#modalAgendaExcluir" id="<?php echo $agenda['idAgenda'] ?>"
-                                                       class="btn btn-danger fa fa-trash agenda_data"></a>
-                                                </td>
-                                            </tr>
-                                        <?php endforeach; ?>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div class="py-5">
+    <div class="container">
+        <div class="row mb-3">
+            <div>
+                <h1 class="text-dark">Agenda</h1>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div>
+                <a class="btn btn-primary" href="FormAgenda.php">Cadastrar novo</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="text-uppercase">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Título</th>
+                            <th scope="col">Capa</th>
+                            <th scope="col">Data do evento</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Editor</th>
+                            <th scope="col">Editar / Remover</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($agendas as $agenda): ?>
+                            <tr class="mb-4">
+                                <th><?php echo $agenda['idAgenda'] ?></th>
+                                <td><?php echo $agenda['tituloAgenda'] ?></td>
+                                <td> <img src="../../../../public/images/agenda/<?php echo $agenda['imagemAgenda'] ?>" width="50px" alt=""></td>
+                                <td><?php echo date('d/m/Y H:s', strtotime($agenda['dataHoraAgenda'])); ?></td>
+                                <td><?php echo substr($agenda['descricaoAgenda'], 0, 50) ?>...</td>
+                                <td><?php echo $agenda['autorAgenda'] ?></td>
+                                <td>
+                                    <a style="text-decoration: none" href="FormAgenda.php?update_id=<?php echo $agenda['idAgenda'] ?>" class="btn btn-success fa fa-pencil"></a>
+                                    <a style="text-decoration: none" data-toggle="modal" data-target="#modalAgendaExcluir" id="<?php echo $agenda['idAgenda'] ?>"
+                                       class="btn btn-danger fa fa-trash agenda_data"></a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </table>
                 </div>
             </div>
         </div>
@@ -137,5 +134,4 @@ if (isset($_GET['delete_id'])) {
     });
 </script>
 </body>
-
 </html>

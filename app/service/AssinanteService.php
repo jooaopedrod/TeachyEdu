@@ -39,7 +39,7 @@ class AssinanteService {
                 $this->assinante->setInteresse($_POST["interesseAssinante"]);
                 $this->dao->criarAssinante($this->assinante);
                 $_SESSION['suc_msg'] = 'Mensagem enviada com sucesso!';
-                header('location: ' . BASE_URL . 'app/view/cursoDetalhado-2?idCurso='.$this->assinante->getInteresse() );
+                header('location: ' . BASE_URL . 'app/view/cursoDetalhado-2.php?idCurso='.$this->assinante->getInteresse() );
             }catch (Exception $e){
                 print($e->getMessage());
             }

@@ -34,50 +34,51 @@ if (isset($_GET['delete_id'])) {
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
 </head>
-
-<body>
+<body class="bodyFundo">
 <?php include("../../includes/sidebarAdmin.php"); ?>
-
-<div class="py-5">
-    <div class="container  ">
-        <div class="row mb-3 d-flex justify-content-center">
-            <div class="col-md-9">
-                <h3 class="text-dark">Editores</h3>
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-9">
-                <div class="mb-4">
-                    <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalEditor">Cadastrar novo</a>
-                </div>
-                <div class="table-responsive">
-                    <table class="table">
-                        <thead class="text-uppercase" >
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Remover</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php foreach ($usuarios as $usuario): ?>
-                            <tr class="mb-4">
-                                <th><?php echo $usuario['idUsuario'] ?></th>
-                                <td><?php echo $usuario['nomeUsuario'] ?></td>
-                                <td><?php echo $usuario['emailUsuario'] ?></td>
-                                <td class="text-center"><a style="text-decoration: none" data-toggle="modal" data-target="#modalUsuarioExcluir" id="<?php echo $usuario['idUsuario'] ?>"
-                                       class=" btn btn-danger fa fa-trash usuario_data"></a>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </table>
+<div>
+    <div class="py-5">
+        <div class="container">
+            <div class="d-flex flex-column">
+                <div>
+                    <div class="container-fluid">
+                        <h1 class="text-light mb-4">Editores</h1>
+                        <div class="card text-light bg-light shadow">
+                            <div class="card-header py-3">
+                                <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modalEditor">Cadastrar novo</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                                    <table class="table my-0 text-black" id="dataTable">
+                                        <thead class="text-uppercase">
+                                        <tr>
+                                            <th scope="col">Id</th>
+                                            <th scope="col">Nome</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Remover</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php foreach ($usuarios as $usuario): ?>
+                                            <tr class="mb-4">
+                                                <th><?php echo $usuario['idUsuario'] ?></th>
+                                                <td><?php echo $usuario['nomeUsuario'] ?></td>
+                                                <td><?php echo $usuario['emailUsuario'] ?></td>
+                                                <td><a style="text-decoration: none" data-toggle="modal" data-target="#modalUsuarioExcluir" id="<?php echo $usuario['idUsuario'] ?>"
+                                                                           class=" btn btn-danger fa fa-trash usuario_data"></a>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <div class="modal fade" id="modalEditor">
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content rounded-5 shadow">
