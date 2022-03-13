@@ -172,7 +172,7 @@ if (isset($_POST["agenda_id"])) {
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Email</label>
-                    <input type="email" class="form-control" name="emailAssinante" placeholder="Digite seu" required>
+                    <input type="email" class="form-control" name="emailAssinante" placeholder="Digite seu email" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Telefone</label>

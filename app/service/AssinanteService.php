@@ -17,7 +17,7 @@ class AssinanteService {
     }
 
     function verificarRequisicao() {
-        if ($this->requisicao == "cadastrarAssinantes") {
+        if ($this->requisicao == "cadastrarAssinante") {
             try {
                 $this->assinante->setNome($_POST["nomeAssinante"]);
                 $this->assinante->setEmail($_POST["emailAssinante"]);
@@ -27,6 +27,19 @@ class AssinanteService {
                 $this->dao->criarAssinante($this->assinante);
                 $_SESSION['suc_msg'] = 'Mensagem enviada com sucesso!';
                 header('location: ' . BASE_URL . 'app/view/FAQ.php');
+            }catch (Exception $e){
+                print($e->getMessage());
+            }
+        }if ($this->requisicao == "cadastrarAssinanteCursoMentoria") {
+            try {
+                $this->assinante->setNome($_POST["nomeAssinante"]);
+                $this->assinante->setEmail($_POST["emailAssinante"]);
+                $this->assinante->setTelefone($_POST["telefoneAssinante"]);
+                $this->assinante->setMensagem($_POST["mensagemAssinante"]);
+                $this->assinante->setInteresse($_POST["interesseAssinante"]);
+                $this->dao->criarAssinante($this->assinante);
+                $_SESSION['suc_msg'] = 'Mensagem enviada com sucesso!';
+                header('location: ' . BASE_URL . 'app/view/cursoDetalhado-2?idCurso='.$this->assinante->getInteresse() );
             }catch (Exception $e){
                 print($e->getMessage());
             }

@@ -261,7 +261,7 @@ if (isset($_GET['idCurso'])) {
                     </div>
                     <input type="hidden" name="interesseAssinante" value="<?php echo $curso['idCursoMentoria']?>">
                     <div class="modal-footer noBorder justify-content-center">
-                        <button type="submit" name="requisicao" value="cadastrarAssinantes" class="btn btn-primary">Me inscrever</button>
+                        <button type="submit" name="requisicao" value="cadastrarAssinanteCursoMentoria" class="btn btn-primary">Me inscrever</button>
                     </div>
                 </form>
             </div>
