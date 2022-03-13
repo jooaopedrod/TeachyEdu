@@ -27,7 +27,7 @@ class UsuarioService {
                 $this->usuario->setEmail($_POST['email']);
                 $this->usuario->setSenha($_POST['senha']);
                 $this->dao->fazerLogin($this->usuario);
-                header("Location: ../view/dashboard/agenda/agendaIndex.php");
+                header("Location: ../view/dashboard/indexDashboard.php");
             } catch (Exception $e) {
                 $_SESSION["erro_mensg"] = $e->getMessage();
                 header("Location: ../view/teste.php");
@@ -62,7 +62,7 @@ class UsuarioService {
             $this->usuario->setValidacaoToken(1);
             $this->dao->atualizarSenha($this->usuario);
             session_unset();
-            header("Location: ../view/dashboard/agenda/agendaIndex.php");
+            header("Location: ../view/dashboard/indexDashboard.php");
         }
 //        if ($this->requisicao == "recuperarSenha") {
 //            //"SELECT * FROM `usuario`"
