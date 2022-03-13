@@ -216,7 +216,7 @@ if (isset($_POST["agenda_id"])) {
 </div>
 <div class="containerEdit"
      style="background-image: url(../../public/images/bgindex.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat; background-attachment: fixed;">
-    <div class="container">
+    <div class="container" >
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="text-light section-heading tituloConheca">Por que escolher a TeachyEdu?<br></h1>
