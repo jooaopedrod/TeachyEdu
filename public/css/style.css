@@ -1,0 +1,224 @@
+/* POST SLIDER */
+
+.post-slider {
+    position: relative;
+}
+
+.post-slider .slider-title {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.post-slider .next {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    color: #1e3653;
+    cursor: pointer;
+}
+
+.post-slider .prev {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    color: #1e3653;
+    cursor: pointer;
+}
+
+.post-slider .post-wrapper {
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+}
+
+.post-slider .post-wrapper .post {
+    width: 300px;
+    height: 330px;
+    margin: 0px 10px;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
+}
+
+.post-slider .post-wrapper .post .post-info {
+    height: 130px;
+    padding: 0px 5px;
+    padding-left: 15px;
+}
+
+.post-slider .post-wrapper .post .slider-image {
+    max-width: 100% !important;
+    width: auto;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.post-info h4 {
+    margin-top: 10px;
+}
+
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+.containerTab {
+    padding: 20px;
+    color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Closable button inside the image */
+.closebtn {
+    float: right;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/*Barra lateral*/
+.modal-nav {
+    width: 300px;
+}
+
+.modal-content-nav {
+    width: 300px;
+}
+
+.list-group-item:hover {
+    background-color: rgba(59, 57, 57, 0.164) !important;
+}
+
+/*NAVBAR*/
+
+#mainNav {
+    border-bottom: 1px solid rgba(33, 37, 41, .1);
+    background-color: #fff;
+    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    transition: all .2s
+}
+
+#mainNav .navbar-brand {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1E3653;
+    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif
+}
+
+#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    color: #1E3653
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link, #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+    font-size: .9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #212529
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link:hover, #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+    color: #1E3653
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active, #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
+    color: #1E3653 !important;
+    background-color: transparent
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover, #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
+    background-color: transparent
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+        border-color: transparent;
+        background-color: transparent
+    }
+
+    #mainNav .navbar-brand {
+        color: rgba(255, 255, 255, .7)
+    }
+
+    #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+        color: #fff
+    }
+
+    #mainNav .navbar-nav > li.nav-item > a.nav-link {
+        padding: .5rem 1rem
+    }
+
+    #mainNav .navbar-nav > li.nav-item > a.nav-link, #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
+        color: rgba(255, 255, 255, .7)
+    }
+
+    #mainNav .navbar-nav > li.nav-item > a.nav-link:hover, #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+        color: #fff
+    }
+
+    #mainNav.navbar-shrink {
+        border-bottom: 1px solid rgba(33, 37, 41, .1);
+        background-color: #fff
+    }
+
+    #mainNav.navbar-shrink .navbar-brand {
+        color: #1E3653
+    }
+
+    #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
+        color: #1E3653
+    }
+
+    #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link, #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
+        color: #212529
+    }
+
+    #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover, #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+        color: #1E3653
+    }
+}
+
+.barra {
+    height: 3px !important;
+    width: 10%;
+    color: white;
+    margin: 30px auto;
+    border-radius: 10px;
+    opacity: inherit;
+}
+
+.barraFAQ {
+    height: 3px !important;
+    width: 10%;
+    color: darkgrey;
+    margin: 30px auto;
+    border-radius: 10px;
+    opacity: inherit;
+}
+
+.labelFont {
+    font-weight: bold;
+}
+
+.toastBg{
+    background-color: #1e3653;
+    color: white;
+}

@@ -1,0 +1,310 @@
+<?php
+require_once __DIR__ . "/../model/dao/AgendaDAO.php";
+require_once __DIR__ . "/../model/Agenda.php";
+require_once __DIR__ . "/../path.php";
+
+$dao = new AgendaDAO();
+$agendas = array();
+$agendas = $dao->consultarAgendas();
+$dao = new AgendaDAO();
+
+if (isset($_POST["agenda_id"])) {
+    $agendaModal = array();
+    $agendaModal = $dao->consultarAgenda($_POST['agenda_id']);
+}
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home - TeachyEdu</title>
+    <link rel="icon" sizes="500x500" href="../../public/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+</head>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,500,600,700,800);
+
+    * {
+        font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .cabecalho {
+        height: 100vh;
+    }
+
+    .containerEdit {
+        padding-bottom: 128px;
+        padding-top: 128px;
+        background: #1e3653;
+    }
+
+    .tituloSobre {
+        margin-bottom: 0;
+        font-weight: 700;
+    }
+
+    .textoSobre {
+        color: rgba(255, 255, 255, .7);
+        text-align: left;
+    }
+
+    .botao {
+        background-color: #1e3653;
+        color: white;
+        border: none;
+    }
+
+    .icone {
+        color: #1e3653;
+    }
+
+    titulo {
+        font-weight: 500;
+    }
+
+    .footer-basic {
+        padding: 40px 0;
+        background-color: #1E3653;
+        color: white;
+    }
+
+    .footer-basic ul {
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 0
+    }
+
+    .footer-basic li {
+        padding: 0 10px
+    }
+
+    .footer-basic ul a {
+        color: inherit;
+        text-decoration: none;
+        opacity: .8
+    }
+
+    .footer-basic ul a:hover {
+        opacity: 1
+    }
+
+    .footer-basic .social {
+        text-align: center;
+        padding-bottom: 25px
+    }
+
+    .footer-basic .social > a {
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        margin: 0 8px;
+        color: inherit;
+        opacity: .75
+    }
+
+    .footer-basic .social > a:hover {
+        opacityelement .
+        style: .9
+    }
+
+    .footer-basic .copyright {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 13px;
+        color: #aaa;
+        margin-bottom: 0
+    }
+
+    @media (max-width: 768px) {
+        .imgRemover {
+            display: none;
+            padding-bottom: 128px;
+            padding-top: 128px;
+        }
+
+        .containerEdicao {
+            padding-bottom: 68px;
+            padding-top: 25px;
+        }
+    }
+
+    .fundo {
+        background-color: #EBEBEB;
+    }
+
+    .fonte {
+        font-weight: 400;
+    }
+
+    .espacoFooter {
+        padding-bottom: 7rem !important;;
+    }
+
+</style>
+<body>
+
+<?php include("includes/nav.php"); ?>
+
+<div class="py-5 text-left text-white align-items-center d-flex cabecalho"
+     style="background-image: url(../../public/images/bg.png);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat; background-attachment: fixed;">
+    <div class="container py-5">
+        <div class="row">
+            <div class="mx-auto col-lg-8 col-md-10">
+                <h1 class="display-3 mb-4 fonte"><strong>TeachyEdu</strong></h1>
+                <h2 class="mb-5 fonte">Uma marca pessoal que transforma pessoas em professores e inova práticas
+                    educacionais. </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="containerEdit text-center">
+    <div class="container">
+        <div class="row">
+            <div class="px-lg-5 d-flex flex-column justify-content-center col-lg-12">
+                <h2 class="text-white tituloSobre">Sobre a TeachyEdu</h2>
+                <hr class="my-4 barra">
+                <p class="mb-3 textoSobre">A TeachyEdu surgiu da junção entre as palavras Teacher + Education, raízes da
+                    atividade profissional da Professora Patricia de Lara Ramos. A proposta dessa marca está atrelada à
+                    ideia de trabalhar com educação no âmbito da formação de professores inovadores (metodologicamente
+                    atualizados) e atentos ao mundo digital, que está em constante evolução e coloca os profissionais de
+                    qualquer área em evidência, especialmente os professores, bem como a transformação de falantes de
+                    língua inglesa em professores, considerando a alta demanda do mundo do trabalho e a escassez de
+                    profissionais qualificados para essa função. Sendo assim, a Professora Patricia, por meio da sua
+                    marca - TeachyEdu - oferece palestras, oficinas, mentorias e cursos atendendo essas vertentes. </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fundo">
+    <div class="container containerEdicao">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6 col-xl-4 col-xxl-5">
+                <h2 style="padding-top: 45px;">Cursos e mentorias<br></h2>
+                <p><br>Uma marca pessoal que transforma pessoas em professores e inova práticas educacionais.<br></p>
+                <a href="indexCurso-2.php" class="btn btn-primary botao">Conheça</a>
+            </div>
+            <div class="col-md-6 col-xl-4 col-xxl-3 imgRemover"><img src="../../public/images/cursoIndexImg.svg" style="width: 200px;"></div>
+        </div>
+    </div>
+</div>
+<div class="containerEdit"
+     style="background-image: url(../../public/images/bgindex.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat; background-attachment: fixed;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="text-light section-heading">Por que escolher a TeachyEdu?<br></h2>
+                <p class="my-4"></p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4 text-center">
+                <div class="mx-auto service-box mt-5">
+                    <h1 class="display-4 text-center mb-4 text-light"><i class="bi bi-headset icone"></i></h1>
+                    <h3 class="text-light mb-3">Atendimento personalizado</h3>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 text-center">
+                <div class="mx-auto service-box mt-5">
+                    <h1 class="display-4 text-center mb-4 text-light"><i class="bi bi-lightbulb icone"></i></h1>
+                    <h3 class="text-light mb-3">Foco na formação de professores inovadores</h3>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 text-center">
+                <div class="mx-auto service-box mt-5">
+                    <h1 class="display-4 text-center mb-4 text-light"><i class="bi bi-headset icone"></i></h1>
+                    <h3 class="text-light mb-3">Resultados imediatos em sua prática pedagógica</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pt-5 fundo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Eventos</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pt-3 espacoFooter fundo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="post-slider">
+                    <i class="fas fa-chevron-left prev"></i>
+                    <i class="fas fa-chevron-right next"></i>
+                    <div class="post-wrapper">
+                        <?php foreach ($agendas as $post): ?>
+                            <div data-toggle="modal" data-target="#meumodal" class="post post_data" id="<?php echo $post['idAgenda']; ?>">
+                                <img src="<?php echo '../../public/images/agenda/' . $post['imagemAgenda']; ?>" alt=""
+                                     class="slider-image">
+                                <div class="post-info">
+                                    <h4 style=""><?php echo $post['tituloAgenda'] ?></h4>
+                                    <i class="far fa-calendar"> <?php echo date('d F, Y', strtotime($post['dataHoraAgenda'])); ?></i><br>
+                                    <i class="far fa-calendar"> <?php echo date('H:s', strtotime($post['dataHoraAgenda'])); ?></i><br>
+                                    <span> <?php echo substr($post['descricaoAgenda'], 0, 2) ?>... </span>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="meumodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div id="modalContent" class="modal-content">
+
+        </div>
+    </div>
+</div>
+
+<?php include("includes/footer.php"); ?>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="../../public/javascript/javascript.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(document).on('click', '.post_data', function () {
+            var agenda_id = $(this).attr('id');
+            if (agenda_id !== '') {
+                $.post('eventoDetalhado.php', {'agenda_id': agenda_id}, function (retorna) {
+                    $("#modalContent").html(retorna);
+                })
+            }
+
+        });
+    });
+</script>
+</body>
+
+</html>
