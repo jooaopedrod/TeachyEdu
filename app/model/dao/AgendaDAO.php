@@ -39,6 +39,19 @@ class AgendaDAO {
         }
     }
 
+    public function consultarAgendas30dias() {
+        try {
+            $sql = "SELECT * FROM `agendas`";
+            $statement = $this->conn->prepare($sql);
+            $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+
+        } catch (Exception $e) {
+            print($e->getMessage());
+        }
+    }
+
     public function consultarAgenda($id) {
         try {
             $sql = "SELECT * FROM `agendas` WHERE idAgenda = $id";

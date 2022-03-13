@@ -1,2 +1,2 @@
 <?php
-header('location: http://localhost/PI-TeachyEdu/app/view/dashboard/agenda/agendaIndex.php');
+header('location:' . BASE_URL . 'app/view/dashboard/agenda/agendaIndex.php');

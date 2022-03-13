@@ -212,7 +212,6 @@ if (isset($_GET['filtro'])) {
             <a href="indexCurso-2.php" ><h4>Todos</h4></a>
             <a href="indexCurso-2.php?filtro=1"><h4>Cursos</h4></a>
             <a href="indexCurso-2.php?filtro=0"><h4>Mentorias</h4></a>
-            <input>
         </div>
     </div>
     <div class="container">

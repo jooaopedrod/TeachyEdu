@@ -154,7 +154,7 @@ if (isset($_POST["agenda_id"])) {
     <div class="container my-auto">
         <div class="row">
             <div class="col-lg-10 mx-auto">
-                <h1 class="text-center text-uppercase" style="text-align: left;"><strong>Fale conoscos</strong></h1>
+                <h1 class="text-center text-uppercase" style="text-align: left;"><strong>Fale conosco</strong></h1>
             </div>
         </div>
     </div>
