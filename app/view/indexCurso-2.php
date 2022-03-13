@@ -129,8 +129,7 @@ if (isset($_GET['filtro'])) {
         }
 
         .bordaCartao img {
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
+            border-radius: 8px;
         }
 
 
@@ -209,9 +208,9 @@ if (isset($_GET['filtro'])) {
 <div class="secao" style="background: #e9ecef;">
     <div class="d-flex justify-content-center bd-highlight mb-3">
         <div class="filters">
-            <a href="indexCurso-2.php" ><h4>Todos</h4></a>
-            <a href="indexCurso-2.php?filtro=1"><h4>Cursos</h4></a>
-            <a href="indexCurso-2.php?filtro=0"><h4>Mentorias</h4></a>
+            <a href="indexCurso.php" ><h4>Todos</h4></a>
+            <a href="indexCurso.php?filtro=1"><h4>Cursos</h4></a>
+            <a href="indexCurso.php?filtro=0"><h4>Mentorias</h4></a>
         </div>
     </div>
     <div class="container">

@@ -35,7 +35,7 @@ if (isset($_GET['idCurso'])) {
      style="background-image: url('https://static.pingendo.com/cover-bubble-dark.svg');background-size:cover; background-attachment: fixed;">
     <div class="container">
         <div class="row">
-            <div class="p-5 mx-auto col-md-8 col-10" style="">
+            <div class="p-5 mx-auto col-md-8 col-10"  >
                 <i class="fa fa-2x fa-camera-retro"></i>
                 <hr class="bg-dark">
                 <h3 class=""><?php echo $curso['nomeCurso'] ?></h3>
@@ -46,11 +46,11 @@ if (isset($_GET['idCurso'])) {
 <div class="py-5">
     <div class="container">
         <div class="row">
-            <div class="col-md-6" style="">
+            <div class="col-md-6"  >
                 <h1 class="">Atuação</h1>
                 <p class=""><?php echo $curso['descricaoCurso'] ?></p>
             </div>
-            <div class="ml-auto col-md-4" style="">
+            <div class="ml-auto col-md-4"  >
                 <div class="card bg-light">
                     <div class="card-body p-4">
                         <div class="row">

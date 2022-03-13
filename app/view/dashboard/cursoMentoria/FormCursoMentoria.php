@@ -125,8 +125,8 @@ if (isset($_GET['update_id'])) {
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-2 col-form-label mb-3" style="">Descrição</label>
-                        <div class="col-10" style="">
+                        <label class="col-2 col-form-label mb-3"  >Descrição</label>
+                        <div class="col-10"  >
                             <textarea class="form-control mb-3" name="descricao" id="descricao" required><?php echo $descricao ?></textarea>
                         </div>
                     </div>

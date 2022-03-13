@@ -179,7 +179,7 @@ if (isset($_GET['idCurso'])) {
                     <?php if (!empty($curso['videoCursoMentoria'])) : ?>
                         <div class="row">
                             <div class="embed-responsive embed-responsive-16by9">
-                                <iframe style="" src="<?php echo $curso['videoCursoMentoria'] ?>" allowfullscreen="" class="embed-responsive-item"></iframe>
+                                <iframe src="<?php echo $curso['videoCursoMentoria'] ?>" allowfullscreen="" class="embed-responsive-item"></iframe>
                             </div>
                         </div>
                     <?php endif; ?>
@@ -247,7 +247,7 @@ if (isset($_GET['idCurso'])) {
                     </div>
                     <div class="form-group row mb-3">
                         <div class="col-12" >
-                            <label class="col-form-labe" style="">Telefone</label>
+                            <label class="col-form-labe">Telefone</label>
                             <input type="tel" placeholder="Telefone" class="form-control" name="telefoneAssinante">
                         </div>
                     </div>

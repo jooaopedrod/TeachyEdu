@@ -208,7 +208,7 @@ if (isset($_POST["agenda_id"])) {
             <div class="col-md-6 col-xl-4 col-xxl-5">
                 <h2 style="padding-top: 45px;">Cursos e mentorias<br></h2>
                 <p><br>O propósito principal dos cursos da TeachyEdu é transformar a prática docente em experiências cada vez mais dinâmicas, modernas e eficazes.<br></p>
-                <a href="indexCurso-2.php" class="btn btn-primary botao">Conheça</a>
+                <a href="indexCurso.php" class="btn btn-primary botao">Conheça</a>
             </div>
             <div class="col-md-6 col-xl-4 col-xxl-3 imgRemover"><img src="../../public/images/cursoIndexImg.svg" style="width: 200px;"></div>
         </div>
@@ -269,7 +269,7 @@ if (isset($_POST["agenda_id"])) {
                                 <img src="<?php echo '../../public/images/agenda/' . $post['imagemAgenda']; ?>" alt=""
                                      class="slider-image">
                                 <div class="post-info">
-                                    <h4 style=""><?php echo $post['tituloAgenda'] ?></h4>
+                                    <h4  ><?php echo $post['tituloAgenda'] ?></h4>
                                     <i class="italico"> <?php echo date('d F, Y', strtotime($post['dataHoraAgenda'])); ?></i><br>
                                     <span> <?php echo substr($post['descricaoAgenda'], 0, 50) ?>... </span>
                                 </div>
