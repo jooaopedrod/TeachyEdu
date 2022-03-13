@@ -38,6 +38,18 @@ class AgendaDAO {
             print($e->getMessage());
         }
     }
+    public function consultarAgendasComUsuario() {
+        try {
+            $sql = "SELECT a.*, u.nomeUsuario FROM agendas a, usuarios u WHERE u.idUsuario = a.autorAgenda";
+            $statement = $this->conn->prepare($sql);
+            $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+
+        } catch (Exception $e) {
+            print($e->getMessage());
+        }
+    }
 
     public function consultarAgendas30dias() {
         try {

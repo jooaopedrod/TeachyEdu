@@ -207,11 +207,7 @@ if (isset($_GET['idCurso'])) {
         </div>
     </div>
 </div>
-<div class="text-white bg-dark secao">
-    <div class="container text-center">
-        <h2 class="mb-4">Conheça o trabalho da professora Patricia!</h2><a class="btn btn-light btnLattes noBorder" href="http://lattes.cnpq.br/0989579833207354" target="_blank">Currículo Lattes</a>
-    </div>
-</div>
+
 <?php include("includes/footer.php"); ?>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

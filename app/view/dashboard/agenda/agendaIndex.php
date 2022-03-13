@@ -8,7 +8,7 @@ LoginFilterService::isLogged();
 
 $dao = new AgendaDAO();
 $agendas = array();
-$agendas = $dao->consultarAgendas();
+$agendas = $dao->consultarAgendasComUsuario();
 
 if (isset($_GET['delete_id'])) {
     $id = $_GET['delete_id'];
@@ -66,7 +66,7 @@ if (isset($_GET['delete_id'])) {
                                                 <td> <img src="../../../../public/images/agenda/<?php echo $agenda['imagemAgenda'] ?>" width="50px" alt=""></td>
                                                 <td><?php echo date('d/m/Y H:s', strtotime($agenda['dataHoraAgenda'])); ?></td>
                                                 <td><?php echo substr($agenda['descricaoAgenda'], 0, 50) ?>...</td>
-                                                <td><?php echo $agenda['autorAgenda'] ?></td>
+                                                <td><?php echo $agenda['nomeUsuario'] ?></td>
                                                 <td>
                                                     <a style="text-decoration: none" href="FormAgenda.php?update_id=<?php echo $agenda['idAgenda'] ?>" class="btn btn-success fa fa-pencil"></a>
                                                     <a style="text-decoration: none" data-toggle="modal" data-target="#modalAgendaExcluir" id="<?php echo $agenda['idAgenda'] ?>"

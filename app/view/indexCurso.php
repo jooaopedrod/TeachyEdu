@@ -232,11 +232,7 @@ if (isset($_GET['filtro'])) {
         </div>
     </div>
 </div>
-<div class="text-white bg-dark secao">
-    <div class="container text-center">
-        <h2 class="mb-4">Conheça o trabalho da professora Patricia!</h2><a class="btn btn-light btnLattes" href="http://lattes.cnpq.br/0989579833207354" target="_blank">Conhecer</a>
-    </div>
-</div>
+
 <?php include("includes/footer.php"); ?>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

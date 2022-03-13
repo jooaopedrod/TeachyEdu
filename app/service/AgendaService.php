@@ -47,6 +47,7 @@ class AgendaService {
                 header('location: ' . BASE_URL . 'app/view/dashboard/agenda/agendaIndex.php?acao=cadastro-sucesso');
             } catch (Exception $e) {
                 $_SESSION["erro_mnsg"] = $e->getMessage();
+                print($e->getMessage());
                 header('location: ' . BASE_URL . 'app/view/dashboard/agenda/FormAgenda.php');
 
             }
