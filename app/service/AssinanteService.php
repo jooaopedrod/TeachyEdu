@@ -17,7 +17,7 @@ class AssinanteService {
     }
 
     function verificarRequisicao() {
-        if ($this->requisicao == "cadastrarAssinante") {
+        if ($this->requisicao == "cadastrarAssinantes") {
             try {
                 $this->assinante->setNome($_POST["nomeAssinante"]);
                 $this->assinante->setEmail($_POST["emailAssinante"]);
