@@ -186,7 +186,7 @@ if (isset($_POST["agenda_id"])) {
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" name="aceitoAssinante" required>
                         <label class="form-check-label" for="flexCheckDefault">
-                            Concordo com a política de privacidade inexistente.
+                            Ao enviar os dados acima, eu concordo em receber e-mails e mensagens através do WhatsApp da TeachyEdu.
                         </label>
                     </div>
                 </div>

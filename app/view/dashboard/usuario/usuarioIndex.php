@@ -96,7 +96,7 @@ if (isset($_GET['delete_id'])) {
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancelar</button>
-                        <button type="submit" name="requisicao" value="preCadastroEditor" class="btn btn-primary">Criar Editor</button>
+                        <button type="submit" name="requisicao" value="preCadastroEditor" class="btn btn-primary">Salvar</button>
                     </div>
                 </form>
             </div>

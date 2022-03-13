@@ -166,7 +166,7 @@ if (isset($_GET['update_id'])) {
                                 <?php } ?>
                                 <?php foreach ($modulos as $modulo) { ?>
                                     <tr>
-                                        <td><input class="form-control" name="id" value="<?php echo $modulo['idModulo'] ?>" disabled></td>
+                                        <td><input class="form-control" name="id" value="<?php echo $modulo['idModulo'] ?>" type="hiden">#</td>
                                         <td><input class="form-control" name="nome" value="<?php echo $modulo['nomeModulo'] ?>" type="text"></td>
                                         <td><input class="form-control" name="descricao" value="<?php echo $modulo['descricaoModulo'] ?>" type="text"></td>
                                         <td><span class="deleteRow fa fa-trash text-danger"></span></td>

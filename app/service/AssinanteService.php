@@ -27,7 +27,6 @@ class AssinanteService {
                 $this->dao->criarAssinante($this->assinante);
                 $_SESSION['suc_msg'] = 'Mensagem enviada com sucesso!';
                 header('location: ' . BASE_URL . 'app/view/FAQ.php');
-
             }catch (Exception $e){
                 print($e->getMessage());
             }

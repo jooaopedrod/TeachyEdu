@@ -236,22 +236,30 @@ if (isset($_GET['idCurso'])) {
                     <div class="form-group row mb-3">
                         <div class="col-12 ">
                             <label class="col-2 col-form-label">Nome</label>
-                            <input type="text" placeholder="Nome" class="form-control" name="nomeAssinante">
+                            <input type="text" placeholder="Nome" class="form-control" name="nomeAssinante" required>
                         </div>
                     </div>
                     <div class="form-group row mb-3">
                         <div class="col-12">
                             <label class="col-2 col-form-label">E-mail</label>
-                            <input type="email" placeholder="E-mail" class="form-control" name="emailAssinante">
+                            <input type="email" placeholder="E-mail" class="form-control" name="emailAssinante" required>
                         </div>
                     </div>
                     <div class="form-group row mb-3">
                         <div class="col-12" >
                             <label class="col-form-labe">Telefone</label>
-                            <input type="tel" placeholder="Telefone" class="form-control" name="telefoneAssinante">
+                            <input type="tel" placeholder="Telefone" class="form-control" name="telefoneAssinante" required>
                         </div>
                     </div>
-                    <input type="hidden" name="interesseAssinante" value="<?php echo $curso['idCurso']?>">
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" name="aceitoAssinante" required>
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Ao enviar os dados acima, eu concordo em receber e-mails e mensagens através do WhatsApp da TeachyEdu.
+                            </label>
+                        </div>
+                    </div>
+                    <input type="hidden" name="interesseAssinante" value="<?php echo $curso['idCursoMentoria']?>">
                     <div class="modal-footer noBorder justify-content-center">
                         <button type="submit" name="requisicao" value="cadastrarAssinantes" class="btn btn-primary">Me inscrever</button>
                     </div>
