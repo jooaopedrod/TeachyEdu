@@ -28,11 +28,16 @@ $assinantes = $dao->consultarAssinantes();
 <?php include("../../includes/sidebarAdmin.php"); ?>
 <div class="py-5">
     <div class="container">
+        <div class="row mb-3">
+            <div>
+                <h1 class="text-dark">Leads</h1>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="table-responsive">
                     <table class="table">
-                        <thead>
+                        <thead class="text-uppercase">
                         <tr>
                             <th scope="col">Id</th>
                             <th scope="col">Nome</th>
@@ -49,9 +54,8 @@ $assinantes = $dao->consultarAssinantes();
                                 <td><?php echo $assinante['nomeAssinante'] ?></td>
                                 <td><?php echo $assinante['emailAssinante'] ?></td>
                                 <td><?php echo $assinante['telefoneAssinante'] ?></td>
-                                <td><?php echo $assinante['mensagemAssinante'] ?></td>
+                                <td><?php echo substr($assinante['mensagemAssinante'], 0, 50) ?> ...</td>
                                 <td><?php echo $assinante['interesseAssinante'] ?></td>
-                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </table>

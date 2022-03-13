@@ -173,7 +173,7 @@ if (isset($_GET['idCurso'])) {
                 </div>
             </div>
         </div>
-        <?php if (!empty($curso['videoCursoMentoriao'])) : ?>
+        <?php if (!empty($curso['videoCursoMentoria'])) : ?>
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <?php if (!empty($curso['videoCursoMentoria'])) : ?>

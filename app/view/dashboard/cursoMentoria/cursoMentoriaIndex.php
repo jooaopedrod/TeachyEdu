@@ -38,6 +38,11 @@ if (isset($_GET['delete_id'])) {
 
 <div class="py-5">
     <div class="container">
+        <div class="row mb-3">
+            <div>
+                <h1 class="text-dark">Curso e mentoria</h1>
+            </div>
+        </div>
         <div class="row mb-4">
             <div>
                 <a class="btn btn-primary" href="FormCursoMentoria.php">Cadastrar novo</a>
@@ -64,7 +69,7 @@ if (isset($_GET['delete_id'])) {
                                 <th><?php echo $cursoMentoria['idCursoMentoria'] ?></th>
                                 <td><?php echo $cursoMentoria['nomeCursoMentoria'] ?></td>
                                 <td> <img src="../../../../public/images/curso/<?php echo $cursoMentoria['imagemCursoMentoria'] ?>" width="50px" alt=""></td>
-                                <td><?php echo substr($cursoMentoria['descricaoCursoMentoria'], 0, 50) ?>...</td>
+                                <td><?php echo substr($cursoMentoria['descricaoCursoMentoria'], 0, 50) ?> ...</td>
                                 <?php if ($cursoMentoria['videoCursoMentoria'] != null ):?>
                                 <td class="text-center"><a href="<?php echo $cursoMentoria['videoCursoMentoria'] ?>" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
                                 <?php else: ?>

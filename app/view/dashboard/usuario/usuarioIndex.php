@@ -39,7 +39,12 @@ if (isset($_GET['delete_id'])) {
 <?php include("../../includes/sidebarAdmin.php"); ?>
 
 <div class="py-5">
-    <div class="container ">
+    <div class="container  ">
+        <div class="row mb-3 d-flex justify-content-center">
+            <div class="col-md-9">
+                <h3 class="text-dark">Editores</h3>
+            </div>
+        </div>
         <div class="row d-flex justify-content-center">
             <div class="col-md-9">
                 <div class="mb-4">
