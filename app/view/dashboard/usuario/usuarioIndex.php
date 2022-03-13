@@ -77,7 +77,7 @@ if (isset($_GET['delete_id'])) {
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content rounded-5 shadow">
             <div class="modal-header p-5 pb-4 border-bottom-0">
-                <h3 class="fw-bold mb-0">Adicionar novo editor</h3>
+                <h3 class="fw-bold mb-0">Cadastrar novo editor</h3>
                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-5 pt-0">

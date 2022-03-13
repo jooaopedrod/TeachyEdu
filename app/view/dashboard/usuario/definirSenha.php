@@ -5,6 +5,8 @@ require_once "../../../model/Usuario.php";
 $dao = new UsuarioDAO();
 $usuario = array();
 
+session_unset();
+
 if (isset($_GET['t']) ) {
     $token = $_GET['t'];
     $usuario = $dao->consutarEditorPorToken($token);
@@ -36,7 +38,7 @@ if (isset($_GET['t']) ) {
             <input type="password" name="senha" id="senha" placeholder="Digite sua nova senha" required>
             <div class="underline"></div>
         </div>
-        <button class="btnEmail" type="submit" name="requisicao" value="CadastrarSenha">Mudar</button>
+        <button class="btnEmail" type="submit" name="requisicao" value="CadastrarSenha">Alterar</button>
     </form>
 </main>
 </body>

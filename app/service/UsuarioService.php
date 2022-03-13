@@ -22,7 +22,7 @@ class UsuarioService {
     }
 
     function verificarRequisicao() {
-        if ($this->requisicao == "logar") {
+        if ($this->requisicao == "Entrar") {
             try {
                 $this->usuario->setEmail($_POST['email']);
                 $this->usuario->setSenha($_POST['senha']);
@@ -61,6 +61,8 @@ class UsuarioService {
             $this->usuario->setSenha($senha);
             $this->usuario->setValidacaoToken(1);
             $this->dao->atualizarSenha($this->usuario);
+            session_unset();
+            header("Location: ../view/dashboard/agenda/agendaIndex.php");
         }
 //        if ($this->requisicao == "recuperarSenha") {
 //            //"SELECT * FROM `usuario`"
@@ -122,7 +124,7 @@ class UsuarioService {
 
             $mail->isHTML(true);
             $mail->Subject = 'Nova senha';
-            $mail->Body = 'http://localhost/TeachyEdu-PFC/app/view/dashboard/usuario/definirSenha.php?t=' . $token;
+            $mail->Body = 'http://localhost/TeachyEdu/app/view/dashboard/usuario/definirSenha.php?t=' . $token;
 
 
             if ($mail->send()) {

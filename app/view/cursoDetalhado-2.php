@@ -248,7 +248,7 @@ if (isset($_GET['idCurso'])) {
                     <div class="form-group row mb-3">
                         <div class="col-12" >
                             <label class="col-form-labe">Telefone</label>
-                            <input type="tel" placeholder="Telefone" class="form-control" name="telefoneAssinante" required>
+                            <input type="number" placeholder="(__) _ ____-____" class="form-control" name="telefoneAssinante" required>
                         </div>
                     </div>
                     <div class="mb-3">

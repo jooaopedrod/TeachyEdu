@@ -20,7 +20,7 @@
                 <div class="underline"></div>
             </div>
 
-            <input class="btnSubmit" type="submit" name="requisicao" value="logar">
+            <input class="btnSubmit" type="submit" name="requisicao" value="Entrar">
         </form>
 
         <div class="footer">

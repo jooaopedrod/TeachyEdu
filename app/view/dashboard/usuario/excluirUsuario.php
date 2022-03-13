@@ -14,7 +14,7 @@ if (isset($_POST["usuario_id"])) {
     $resultado .= '<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>';
     $resultado .= '</div>';
     $resultado .= '<div class="modal-body">';
-    $resultado .= '<p>Deseja realmente excluir o item selecinado? </p>';
+    $resultado .= '<p>A ação não pode ser desfeita. Você não vai mais ver esse conteúdo. </p>';
     $resultado .= '</div>';
     $resultado .= '<div class="modal-footer">';
     $resultado .= '<a type="button" class="btn btn-outline-danger" data-dismiss="modal">Fechar</a>';
