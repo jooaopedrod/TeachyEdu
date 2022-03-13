@@ -5,7 +5,7 @@ require_once __DIR__ . "/../path.php";
 
 $dao = new AgendaDAO();
 $agendas = array();
-$agendas = $dao->consultarAgendas();
+$agendas = $dao->consultarAgendas30dias();
 $dao = new AgendaDAO();
 
 if (isset($_POST["agenda_id"])) {
@@ -68,7 +68,7 @@ if (isset($_POST["agenda_id"])) {
         color: #1e3653;
     }
 
-    .titulo {
+    titulo {
         font-weight: 500;
     }
 
@@ -158,9 +158,15 @@ if (isset($_POST["agenda_id"])) {
         padding-bottom: 7rem !important;;
     }
 
+    .italico{
+        font-style: normal ;
+    }
+
+    .tituloConheca{
+        font-weight: bold;
+        font-size: 3.4rem ;
+    }
 </style>
-
-
 <body>
 
 <?php include("includes/nav.php"); ?>
@@ -196,24 +202,25 @@ if (isset($_POST["agenda_id"])) {
         </div>
     </div>
 </div>
+
 <div class="fundo">
     <div class="container containerEdicao">
         <div class="row justify-content-center align-items-center">
             <div class="col-md-6 col-xl-4 col-xxl-5">
                 <h2 style="padding-top: 45px;">Cursos e mentorias<br></h2>
-                <p><br>Uma marca pessoal que transforma pessoas em professores e inova práticas educacionais.<br></p>
+                <p><br>O propósito principal dos cursos da TeachyEdu é transformar a prática docente em experiências cada vez mais dinâmicas, modernas e eficazes.<br></p>
                 <a href="indexCurso.php" class="btn btn-primary botao">Conheça</a>
             </div>
-            <div class="col-md-6 col-xl-4 col-xxl-3 imgRemover"><img src="../../public/images/cursoIndexImg.svg" style="width: 200px;" alt=""></div>
+            <div class="col-md-6 col-xl-4 col-xxl-3 imgRemover"><img src="../../public/images/cursoIndexImg.svg" style="width: 200px;"></div>
         </div>
     </div>
 </div>
 <div class="containerEdit"
      style="background-image: url(../../public/images/bgindex.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat; background-attachment: fixed;">
-    <div class="container">
+    <div class="container" >
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="text-light section-heading">Por que escolher a TeachyEdu?<br></h2>
+                <h1 class="text-light section-heading tituloConheca">Por que escolher a TeachyEdu?<br></h1>
                 <p class="my-4"></p>
             </div>
         </div>
@@ -222,30 +229,30 @@ if (isset($_POST["agenda_id"])) {
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4 text-center">
                 <div class="mx-auto service-box mt-5">
-                    <h1 class="display-4 text-center mb-4 text-light"><i class="bi bi-headset icone"></i></h1>
+                    <h1 class="display-4 text-center mb-4 text-light"><i class="bi bi-headset"></i></h1>
                     <h3 class="text-light mb-3">Atendimento personalizado</h3>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 text-center">
                 <div class="mx-auto service-box mt-5">
-                    <h1 class="display-4 text-center mb-4 text-light"><i class="bi bi-lightbulb icone"></i></h1>
+                    <h1 class="display-4 text-center mb-4 text-light"><i class="bi bi-lightbulb"></i></h1>
                     <h3 class="text-light mb-3">Foco na formação de professores inovadores</h3>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 text-center">
                 <div class="mx-auto service-box mt-5">
-                    <h1 class="display-4 text-center mb-4 text-light"><i class="bi bi-headset icone"></i></h1>
+                    <h1 class="display-4 text-center mb-4 text-light"><i class="bi bi-graph-up-arrow"></i></h1>
                     <h3 class="text-light mb-3">Resultados imediatos em sua prática pedagógica</h3>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="pt-5 fundo">
+<div class="py-5 fundo">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h1>Eventos</h1>
+                <h1>Veja a agenda e participe dos eventos</h1>
             </div>
         </div>
     </div>
@@ -263,10 +270,9 @@ if (isset($_POST["agenda_id"])) {
                                 <img src="<?php echo '../../public/images/agenda/' . $post['imagemAgenda']; ?>" alt=""
                                      class="slider-image">
                                 <div class="post-info">
-                                    <h4><?php echo $post['tituloAgenda'] ?></h4>
-                                    <i class="far fa-calendar"> <?php echo date('d F, Y', strtotime($post['dataHoraAgenda'])); ?></i><br>
-                                    <i class="far fa-calendar"> <?php echo date('H:s', strtotime($post['dataHoraAgenda'])); ?></i><br>
-                                    <span> <?php echo substr($post['descricaoAgenda'], 0, 2) ?>... </span>
+                                    <h4  ><?php echo $post['tituloAgenda'] ?></h4>
+                                    <i class="italico"> <?php echo date('d F, Y', strtotime($post['dataHoraAgenda'])); ?></i><br>
+                                    <span> <?php echo substr($post['descricaoAgenda'], 0, 50) ?>... </span>
                                 </div>
                             </div>
                         <?php endforeach; ?>

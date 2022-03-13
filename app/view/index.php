@@ -29,6 +29,8 @@ if (isset($_POST["agenda_id"])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="../owlCarousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../owlCarousel/dist/assets/owl.theme.default.min.css" />
 
 </head>
 <style>
@@ -298,6 +300,8 @@ if (isset($_POST["agenda_id"])) {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="../../public/javascript/javascript.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../owlCarousel/dist/owl.carousel.min.js"></script>
 
 <script>
     $(document).ready(function () {
