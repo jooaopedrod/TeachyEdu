@@ -5,7 +5,7 @@ require_once __DIR__ . "/../path.php";
 
 $dao = new AgendaDAO();
 $agendas = array();
-$agendas = $dao->consultarAgendas();
+$agendas = $dao->consultarAgendas30dias();
 $dao = new AgendaDAO();
 
 if (isset($_POST["agenda_id"])) {

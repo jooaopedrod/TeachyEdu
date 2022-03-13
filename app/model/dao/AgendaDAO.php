@@ -41,7 +41,8 @@ class AgendaDAO {
 
     public function consultarAgendas30dias() {
         try {
-            $sql = "SELECT * FROM `agendas`";
+            $sql = "SELECT * FROM `agendas` where date_add(dataHoraAgenda, INTERVAL 30 DAY) > NOW()";
+
             $statement = $this->conn->prepare($sql);
             $statement->execute();
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
