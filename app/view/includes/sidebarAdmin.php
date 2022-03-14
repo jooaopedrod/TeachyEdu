@@ -3,7 +3,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="<?php echo BASE_URL . 'app/view/index.php'; ?>" class="navbar-brand mb-0 h1"> TeachyEdu</a>
+        <a href="<?php echo BASE_URL . 'app/view/dashboard/indexDashboard.php'; ?>" class="navbar-brand mb-0 h1"> TeachyEdu</a>
     </div>
 </nav>
 <div class="modal modal-nav true" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

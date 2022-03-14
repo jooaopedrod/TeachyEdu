@@ -39,6 +39,7 @@ class AgendaService {
                 } else {
                     //alert erro
                     throw new Exception("imagem é necessaria");
+                    //print_r("imagem é necessaria");
                 }
                 $this->agenda->setImagem($imagemAgenda);
                 $this->agenda->setUsuario($_SESSION['usuarioSessao']['idUsuario']);
