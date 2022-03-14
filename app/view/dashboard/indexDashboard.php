@@ -46,16 +46,6 @@ LoginFilterService::isLogged();
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-12 col-xs-12 mb-5">
-                <a href="cursoMentoria/cursoMentoriaIndex.php">
-                    <div class="card project-card shadow rounded">
-                        <img class="card-img rounded" src="../../../public/images/fundoBranco.png" alt="Card image">
-                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                            <h4 class="text-primary text-center fonteIcone"><i class="bx bx-pencil"></i><br>Cursos e mentoria</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-3 col-sm-12 col-xs-12 mb-5">
                 <a href="usuario/usuarioIndex.php">
                     <div class="card project-card shadow rounded">
                         <img class="card-img rounded" src="../../../public/images/fundoBranco.png" alt="Card image">
@@ -70,7 +60,17 @@ LoginFilterService::isLogged();
                     <div class="card project-card shadow rounded">
                         <img class="card-img rounded" src="../../../public/images/fundoBranco.png" alt="Card image">
                         <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                            <h4 class="text-primary text-center fonteIcone"><i class="bx bx-calendar"></i><br>Eventos</h4>
+                            <h4 class="text-primary text-center fonteIcone"><i class="bx bx-calendar"></i><br>Agenda de eventos</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-3 col-sm-12 col-xs-12 mb-5">
+                <a href="cursoMentoria/cursoMentoriaIndex.php">
+                    <div class="card project-card shadow rounded">
+                        <img class="card-img rounded" src="../../../public/images/fundoBranco.png" alt="Card image">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h4 class="text-primary text-center fonteIcone"><i class="bx bx-pencil"></i><br>Cursos e mentoria</h4>
                         </div>
                     </div>
                 </a>

@@ -8,7 +8,7 @@ LoginFilterService::isLogged();
 
 $dao = new CursoMentoriaDAO();
 $cursosMentorias = array();
-$cursosMentorias = $dao->consultarCursosMentorias();
+$cursosMentorias = $dao->consultarCursosMentoriasComEditor();
 
 
 if (isset($_GET['delete_id'])) {
@@ -57,6 +57,7 @@ if (isset($_GET['delete_id'])) {
                                             <th scope="col">Descrição</th>
                                             <th class="text-center" scope="col">Video</th>
                                             <th scope="col">Valor</th>
+                                            <th scope="col">Editor</th>
                                             <th scope="col">Ações</th>
                                         </tr>
                                         </thead>
@@ -73,6 +74,7 @@ if (isset($_GET['delete_id'])) {
                                                     <td class="text-center"><i class="fa fa-eye-slash" aria-hidden="true"></i></a></td>
                                                 <?php endif;?>
                                                 <td><?php echo $cursoMentoria['valorCursoMentoria'] ?></td>
+                                                <td><?php echo $cursoMentoria['nomeUsuario'] ?></td>
                                                 <td><a style="text-decoration: none" href="FormCursoMentoria.php?update_id=<?php echo $cursoMentoria['idCursoMentoria'] ?>" class=" btn btn-success btn fa fa-pencil"></a></td>
                                                 <td><a style="text-decoration: none" data-toggle="modal" data-target="#modalCursoExcluir" id="<?php echo $cursoMentoria['idCursoMentoria'] ?>"
                                                        class="btn btn-danger fa fa-trash cursoMentoria_data"></a>

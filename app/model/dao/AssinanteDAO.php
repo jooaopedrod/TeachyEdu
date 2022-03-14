@@ -38,5 +38,18 @@ class AssinanteDAO {
         }
     }
 
+    public function consultarAssinantesComInteresse() {
+        try {
+            $sql = "SELECT * FROM `assinantes`";
+            $statement = $this->conn->prepare($sql);
+            $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+
+        } catch (Exception $e) {
+            print($e->getMessage());
+        }
+    }
+
 }
 

@@ -39,7 +39,7 @@ if (isset($_GET['delete_id'])) {
             <div class="d-flex flex-column">
                 <div>
                     <div class="container-fluid">
-                        <h1 class="text-light mb-4">Eventos</h1>
+                        <h1 class="text-light mb-4">Agenda de eventos</h1>
                         <div class="card text-light bg-light shadow">
                             <div class="card-header py-3">
                                 <a class="btn btn-primary" href="FormAgenda.php">Cadastrar novo</a>

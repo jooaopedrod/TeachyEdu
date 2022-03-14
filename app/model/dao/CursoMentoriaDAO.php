@@ -42,6 +42,18 @@ class CursoMentoriaDAO {
         }
     }
 
+    public function consultarCursosMentoriasComEditor() {
+        try {
+            $sql = "SELECT c.*, u.nomeUsuario FROM cursosMentorias c, usuarios u WHERE u.idUsuario = c.autorCursoMentoria";
+            $statement = $this->conn->prepare($sql);
+            $statement->execute();
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        } catch (Exception $e) {
+            print($e->getMessage());
+        }
+    }
+
     public function consultarCursoMentoria($id) {
         try {
             $sql = "SELECT * FROM `cursosMentorias` WHERE idCursoMentoria = $id";
