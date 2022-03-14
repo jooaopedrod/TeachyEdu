@@ -18,7 +18,7 @@
                     <li class="list-group-item"><a style="text-decoration: none" href="<?php echo BASE_URL . 'app/view/dashboard/usuario/usuarioIndex.php'; ?>"><i class="bx bx-user"></i><span class="ms-2">Editores</span> </a></li>
                     <li class="list-group-item"><a style="text-decoration: none" href="<?php echo BASE_URL . 'app/view/dashboard/agenda/agendaIndex.php'; ?>"><i class="bx bx-calendar"></i><span class="ms-2">Agenda</span> </a></li>
                     <li class="list-group-item"><a style="text-decoration: none" href="<?php echo BASE_URL . 'app/view/dashboard/cursoMentoria/cursoMentoriaIndex.php'; ?>"><i class="bx bx-pencil"></i><span class="ms-2">Cursos e mentorias</span> </a></li>
-                    <li class="list-group-item"><a style="text-decoration: none" href="<?php echo BASE_URL . 'app/view/dashboard/assinante/indexAssinante.php'; ?>"><i class="bx bx-mail-send"></i><span class="ms-2">Assinantes</span> </a></li>
+                    <li class="list-group-item"><a style="text-decoration: none" href="<?php echo BASE_URL . 'app/view/dashboard/assinante/indexAssinante.php'; ?>"><i class="bx bx-mail-send"></i><span class="ms-2">Leads</span> </a></li>
                 </ul>
             </div>
             <div class="modal-footer">

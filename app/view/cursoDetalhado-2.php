@@ -11,6 +11,10 @@ if (isset($_GET['idCurso'])) {
     $curso = $dao->consultarCursoMentoriaCompleto($id);
     $modulos = array();
     $modulos = $dao->consultarModulosCursosMentorias($id);
+
+    if (empty($curso)){
+        header("location:" . BASE_URL ."app/view/indexCurso.php");
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -162,10 +166,7 @@ if (isset($_GET['idCurso'])) {
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title">R$<?php echo $curso['valorCursoMentoria'] ?><small class="text-muted fw-light"></small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
-                            <li>20 users included</li>
-                            <li>10 GB of storage</li>
-                            <li>Priority email support</li>
-                            <li>Help center access</li>
+                            <li>Consultar formas de pagamento disponíveis</li>
                         </ul>
                     </div>
                     <button type="button" class="btn btn-primary noBorder" data-bs-toggle="modal" data-bs-target="#exampleModal">
