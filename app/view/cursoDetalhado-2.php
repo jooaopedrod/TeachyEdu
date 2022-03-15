@@ -117,8 +117,7 @@ if (isset($_GET['idCurso'])) {
         }
 
         .footer-basic .social > a:hover {
-            opacityelement .
-            style: .9
+            opacityelement.style: .9
         }
 
         .footer-basic .copyright {
@@ -154,13 +153,13 @@ if (isset($_GET['idCurso'])) {
     </div>
 </div>
 <div class="secao mx-5">
-    <div class="container d-flex justify-content-center">
+    <div class="container">
         <div class="row">
-            <div class="col-md-7 mb-4">
+            <div class="col-md-6 mb-4">
                 <h2 style="font-weight: 800" class="mb-4 text-uppercase">Descrição</h2>
                 <p class=""><?php echo $curso['descricaoCursoMentoria'] ?>.</p>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
                     <div class="card-header text-uppercase">Investimento</div>
                     <div class="card-body">
@@ -170,19 +169,30 @@ if (isset($_GET['idCurso'])) {
                         </ul>
                     </div>
                     <button type="button" class="btn btn-primary noBorder" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        COMPRAR
+                        Tenho interesse
                     </button>
                 </div>
             </div>
         </div>
+        <?php if (!empty($curso['videoCursoMentoria'])) : ?>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <?php if (!empty($curso['videoCursoMentoria'])) : ?>
+                        <div class="row">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe src="<?php echo $curso['videoCursoMentoria'] ?>" allowfullscreen="" class="embed-responsive-item"></iframe>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        <?php endif; ?>
     </div>
 </div>
 <div class="py-5">
     <div class="container align-items-center">
         <div class="row mb-3 text-center">
-            <div class="col-md-12">
-                <h2 style="font-weight: 800" class="text-uppercase">Módulos</h2>
-            </div>
+            <h2 style="font-weight: 800" class="text-uppercase">Módulos</h2>
         </div>
         <div class="row d-flex justify-content-center">
             <div class="col-md-8">
@@ -232,9 +242,9 @@ if (isset($_GET['idCurso'])) {
                         </div>
                     </div>
                     <div class="form-group row mb-3">
-                        <div class="col-12">
+                        <div class="col-12" >
                             <label class="col-form-labe">Telefone</label>
-                            <input type="number" placeholder="(__) _ ____-____" class="form-control" name="telefoneAssinante" required>
+                            <input type="tel" placeholder="(__) _ ____-____" class="form-control" name="telefoneAssinante" required>
                         </div>
                     </div>
                     <div class="mb-3">
@@ -245,7 +255,7 @@ if (isset($_GET['idCurso'])) {
                             </label>
                         </div>
                     </div>
-                    <input type="hidden" name="interesseAssinante" value="<?php echo $curso['idCursoMentoria'] ?>">
+                    <input type="hidden" name="interesseAssinante" value="<?php echo $curso['idCursoMentoria']?>">
                     <div class="modal-footer noBorder justify-content-center">
                         <button type="submit" name="requisicao" value="cadastrarAssinanteCursoMentoria" class="btn btn-primary">Me inscrever</button>
                     </div>
@@ -254,11 +264,9 @@ if (isset($_GET['idCurso'])) {
         </div>
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="../../public/javascript/javascript.js"></script>
 </body>
 </html>

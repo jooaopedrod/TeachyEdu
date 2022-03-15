@@ -168,7 +168,6 @@ if (isset($_POST["agenda_id"])) {
                 <div class="mb-3">
                     <label class="form-label">Nome</label>
                     <input type="text" class="form-control" name="nomeAssinante" placeholder="Digite seu nome" required>
-                    <input type="hidden" name="interesseAssinante" value="0">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Email</label>
@@ -176,7 +175,7 @@ if (isset($_POST["agenda_id"])) {
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Telefone</label>
-                    <input type="number" placeholder="(__) _ ____-____" class="form-control" name="telefoneAssinante" required>
+                    <input type="tel" placeholder="(__) _ ____-____" class="form-control" name="telefoneAssinante" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Mensagem</label>

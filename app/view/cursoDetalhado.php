@@ -169,7 +169,7 @@ if (isset($_GET['idCurso'])) {
                         </ul>
                     </div>
                     <button type="button" class="btn btn-primary noBorder" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        COMPRAR
+                        Tenho interesse
                     </button>
                 </div>
             </div>
@@ -184,7 +184,6 @@ if (isset($_GET['idCurso'])) {
                             </div>
                         </div>
                     <?php endif; ?>
-
                 </div>
             </div>
         <?php endif; ?>
@@ -245,7 +244,7 @@ if (isset($_GET['idCurso'])) {
                     <div class="form-group row mb-3">
                         <div class="col-12" >
                             <label class="col-form-labe">Telefone</label>
-                            <input type="number" placeholder="(__) _ ____-____" class="form-control" name="telefoneAssinante" required>
+                            <input type="tel" placeholder="(__) _ ____-____" class="form-control" name="telefoneAssinante" required>
                         </div>
                     </div>
                     <div class="mb-3">

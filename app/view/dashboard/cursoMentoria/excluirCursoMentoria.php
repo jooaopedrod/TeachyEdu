@@ -18,7 +18,7 @@ if (isset($_POST["cursoMentoria_id"])) {
     $resultado .= '</div>';
     $resultado .= '<div class="modal-footer">';
     $resultado .= '<a type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancelar</a>';
-    $resultado .= '<a type="button"  href="cursoIndex.php?delete_id='. $cursoModal['idCursoMentoria'].'" class="btn btn-danger">Excluir</a>';
+    $resultado .= '<a type="button"  href="cursoMentoriaIndex.php?delete_id='. $cursoModal['idCursoMentoria'].'" class="btn btn-danger">Excluir</a>';
     $resultado .= '</div>';
 
     echo $resultado;

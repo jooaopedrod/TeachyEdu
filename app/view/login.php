@@ -16,7 +16,7 @@
                 <div class="underline"></div>
             </div>
             <div class="input-field">
-                <input type="password" name="senha" id="password" placeholder="Digite sua senha" required>
+                <input type="password" name="senha" id="password" placeholder="Digite sua senha" minlength="5" required>
                 <div class="underline"></div>
             </div>
 

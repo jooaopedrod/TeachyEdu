@@ -25,9 +25,11 @@ class UsuarioDAO {
                 return true;
             } else {
                 throw new \Exception('A senha está incorreta');
+               //$_SESSION["erro_msg"]= 'A senha está incorreta';
             }
         }
         throw new \Exception('Usuário não existe');
+       // $_SESSION["erro_msg"]= 'Usuário não existe';
     }
 
 

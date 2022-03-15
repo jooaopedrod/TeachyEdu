@@ -35,7 +35,7 @@ if (isset($_GET['t']) ) {
     <form method="post" action="../../../controller/UsuarioController.php">
         <div class="input-field">
             <input type="hidden" name="id" value="<?php echo $usuario['idUsuario'] ?>">
-            <input type="password" name="senha" id="senha" placeholder="Digite sua nova senha" required>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua nova senha" minlength="6" required>
             <div class="underline"></div>
         </div>
         <button class="btnEmail" type="submit" name="requisicao" value="CadastrarSenha">Alterar</button>

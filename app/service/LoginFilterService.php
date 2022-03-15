@@ -13,7 +13,7 @@ class LoginFilterService {
         }
     }
 
-    public function filterUserbyRole( int $type, string $urlWhenNotAllowed ){
+    public static function filterUserbyRole( int $type, string $urlWhenNotAllowed ){
 
         LoginFilterService::isLogged();
 

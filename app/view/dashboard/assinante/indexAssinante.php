@@ -8,7 +8,7 @@ LoginFilterService::isLogged();
 
 $dao = new AssinanteDAO();
 $assinantes = array();
-$assinantes = $dao->consultarAssinantes();
+$assinantes = $dao->consultarAssinantesComInteresse();
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +58,7 @@ $assinantes = $dao->consultarAssinantes();
                                                 <td><?php echo $assinante['emailAssinante'] ?></td>
                                                 <td><?php echo $assinante['telefoneAssinante'] ?></td>
                                                 <td><?php echo substr($assinante['mensagemAssinante'], 0, 50) ?> ...</td>
-                                                <td><?php echo $assinante['interesseAssinante'] ?></td>
+                                                <td><?php echo ($assinante['nomeCursoMentoria'] == null ? 'FAQ' : $assinante['nomeCursoMentoria'] )?></td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </table>
