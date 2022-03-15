@@ -309,6 +309,7 @@ if (isset($_POST["agenda_id"])) {
                     $("#modalContent").html(retorna);
                 })
             }
+
         });
     });
 </script>
