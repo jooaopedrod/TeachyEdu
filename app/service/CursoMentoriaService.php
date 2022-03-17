@@ -24,6 +24,7 @@ class CursoMentoriaService {
 
     function verificarRequisicao() {
         if ($this->requisicao == "cadastrarCurso") {
+            $this->isCursoMentoriaEmpty();
             $this->cursoMentoria->setNome($_POST["nome"]);
             $this->cursoMentoria->setDescricacao($_POST["descricao"]);
             $this->cursoMentoria->setVideo($_POST["video"]);
@@ -67,6 +68,7 @@ class CursoMentoriaService {
                 $this->daoModulo->criarModulo($this->modulo);
             }
         } else if ($this->requisicao == "atualizarCurso") {
+            $this->isCursoMentoriaEmpty();
             $this->cursoMentoria->setId($_POST["idCurso"]);
             $this->cursoMentoria->setNome($_POST["nome"]);
             $this->cursoMentoria->setDescricacao($_POST["descricao"]);
@@ -114,6 +116,25 @@ class CursoMentoriaService {
         } else {
             http_response_code(406);
             throw new Exception("Falha ao carregar a imagem");
+        }
+    }
+
+    function isCursoMentoriaEmpty() {
+        if (empty($_POST["tipo"])) {
+            http_response_code(406);
+            throw new Exception("Tipo é obrigatório");
+        }
+        if (empty($_POST["nome"])) {
+            http_response_code(406);
+            throw new Exception("Nome é obrigatório");
+        }
+        if (empty($_POST["descricao"])) {
+            http_response_code(406);
+            throw new Exception("Descrição é obrigatória");
+        }
+        if (empty($_POST["valor"])) {
+            http_response_code(406);
+            throw new Exception("Valor é obrigatório");
         }
     }
 }

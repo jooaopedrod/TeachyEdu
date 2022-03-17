@@ -79,3 +79,6 @@ window.innerWidth < 768 && [].slice.call(document.querySelectorAll("[data-bss-di
     }
     document.getElementsByClassName("popup-gallery").length > 0 && baguetteBox.run(".popup-gallery", {animation: "slideIn"})
 }();
+
+
+

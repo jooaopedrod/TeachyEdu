@@ -1,4 +1,7 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 require_once "../../../model/dao/AgendaDAO.php";
 require_once "../../../model/Agenda.php";
 require_once __DIR__ . "/../../../service/LoginFilterService.php";
@@ -45,11 +48,14 @@ if (isset($_GET['update_id'])) {
 
 <body>
 <?php include("../../includes/sidebarAdmin.php"); ?>
+<?php print_r($_SESSION); ?>
 
 <?php if (!empty($_SESSION['erro_msg'])): ?>
-    <div class="alert alert-danger" role="alert">
-        <?php echo $_SESSION['erro_msg'] ?>
-        <?php unset($_SESSION['erro_msg']); ?>
+    <div class="container">
+        <div class="alert alert-danger" role="alert">
+            <?php echo $_SESSION['erro_msg'] ?>
+            <?php unset($_SESSION['erro_msg']); ?>
+        </div>
     </div>
 <?php endif; ?>
 

@@ -22,13 +22,16 @@ if (isset($_POST["agenda_id"])) {
     <title>Home - TeachyEdu</title>
     <link rel="icon" sizes="500x500" href="../../public/images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="../../public/css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="../../public/owlCarousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../../public/owlCarousel/dist/assets/owl.theme.default.min.css" />
 
 </head>
 <style>
@@ -148,6 +151,7 @@ if (isset($_POST["agenda_id"])) {
 
     .fundo {
         background-color: #EBEBEB;
+        clear: both;
     }
 
     .fonte {
@@ -158,13 +162,13 @@ if (isset($_POST["agenda_id"])) {
         padding-bottom: 7rem !important;;
     }
 
-    .italico{
-        font-style: normal ;
+    .italico {
+        font-style: normal;
     }
 
-    .tituloConheca{
+    .tituloConheca {
         font-weight: bold;
-        font-size: 3.4rem ;
+        font-size: 3.4rem;
     }
 </style>
 <body>
@@ -202,7 +206,73 @@ if (isset($_POST["agenda_id"])) {
         </div>
     </div>
 </div>
-
+<br>
+<br>
+<!-- carossel-->
+<div class="container" style="clear: both">
+    <section>
+        <div >
+            <div class="single-testimonial-area" >
+                <!--New Testimonial-->
+                <div class="single-testimonial">
+                    <div class="clients-picture">
+                        <img src="../../public/images/Raidel.svg" alt=""/>
+                    </div>
+                    <div class="clients-review">
+                        <p>
+                            Pensando en mi crecimiento profesional no tengo más que palabras de agradecimiento para las formaciones pedagógicas con la profesora Patricia de Lara Ramos. Siempre, de una
+                            forma leve, didáctica y dinámica,
+                            nos transmitió todos sus conocimientos a lo largo de intensas jornadas de capacitación pedagógica durante 2021. A ello debo quien soy hoy como profesional y mucho de la persona
+                            que me he convertido.
+                        </p>
+                    </div>
+                    <div class="clients-information">
+                        <h2>Raidel</h2>
+                        <h3>Alunx TeachyEdu</h3>
+                    </div>
+                </div>
+                <!--New Testimonial-->
+                <div class="single-testimonial">
+                    <div class="clients-picture">
+                        <img src="../../public/images/Matheus.svg" alt=""/>
+                    </div>
+                    <div class="clients-review">
+                        <p>
+                            As formações da TeachyEdu me entregam muita informação relevante em relação a minha área de graduação (pedagogia), por vezes, os conteúdos abordados em sala de aula não são
+                            passados com tanta qualidade e
+                            didática como são nas formações da Patrícia, o que me qualifica enquanto acadêmico e profissional da área, me destacando em relação aos colegas e outros profissionais da área.
+                        </p>
+                    </div>
+                    <div class="clients-information">
+                        <h2>Matheus Nascimento</h2>
+                        <h3>Aluno TeachyEdu</h3>
+                    </div>
+                </div>
+                <!--New Testimonial-->
+                <div class="single-testimonial">
+                    <div class="clients-picture">
+                        <img src="../../public/images/Mariana.svg" alt=""/>
+                    </div>
+                    <div class="clients-review">
+                        <p>
+                            Minha experiência TeachyEdu foi maravilhosa! Nunca conseguiria imaginar que poderia absorver tanto conhecimento e usar meu inglês não só como forma de renda, mas contribuir
+                            para o aprendizado de outras
+                            pessoas. Acredito que não ó professores de inglês, mas todos os professores deveriam passar por uma capacitação como a TeachyEdu proporciona, faz acreditar no futuro da
+                            educação.
+                        </p>
+                    </div>
+                    <div class="clients-information">
+                        <h2>Mariana Fengler</h2>
+                        <h3>Aluna TeachyEdu</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!--fim do carrossel-->
+<br>
+<br>
 <div class="fundo">
     <div class="container containerEdicao">
         <div class="row justify-content-center align-items-center">
@@ -217,7 +287,7 @@ if (isset($_POST["agenda_id"])) {
 </div>
 <div class="containerEdit"
      style="background-image: url(../../public/images/bgindex.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat; background-attachment: fixed;">
-    <div class="container" >
+    <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="text-light section-heading tituloConheca">Por que escolher a TeachyEdu?<br></h1>
@@ -270,7 +340,7 @@ if (isset($_POST["agenda_id"])) {
                                 <img src="<?php echo '../../public/images/agenda/' . $post['imagemAgenda']; ?>" alt=""
                                      class="slider-image">
                                 <div class="post-info">
-                                    <h4  ><?php echo $post['tituloAgenda'] ?></h4>
+                                    <h4><?php echo $post['tituloAgenda'] ?></h4>
                                     <i class="italico"> <?php echo date('d F, Y', strtotime($post['dataHoraAgenda'])); ?></i><br>
                                     <span> <?php echo substr($post['descricaoAgenda'], 0, 50) ?>... </span>
                                 </div>
@@ -293,12 +363,19 @@ if (isset($_POST["agenda_id"])) {
 <?php include("includes/footer.php"); ?>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="../../public/javascript/javascript.js"></script>
+
+<!--Carousel-->
+<script src="../../public/owlCarousel/dist/owl.carousel.min.js"></script>
+<script src="../../public/javascript/owlCarousel.js"></script>
 
 <script>
     $(document).ready(function () {

@@ -2,8 +2,9 @@
 require_once __DIR__ . "/../model/dao/AgendaDAO.php";
 require_once __DIR__ . "/../model/Agenda.php";
 include("../path.php");
-session_start();
-
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 class AgendaService {
 
     private $requisicao;
@@ -39,7 +40,7 @@ class AgendaService {
                 } else {
                     //alert erro
                     throw new Exception("imagem é necessaria");
-                    //print_r("imagem é necessaria");
+
                 }
                 $this->agenda->setImagem($imagemAgenda);
                 $this->agenda->setUsuario($_SESSION['usuarioSessao']['idUsuario']);
@@ -47,7 +48,7 @@ class AgendaService {
                 $_SESSION['suc_msg'] = "cadastrada com susseso";
                 header('location: ' . BASE_URL . 'app/view/dashboard/agenda/agendaIndex.php?acao=cadastro-sucesso');
             } catch (Exception $e) {
-                $_SESSION["erro_mnsg"] = $e->getMessage();
+                $_SESSION["erro_msg"] = $e->getMessage();
                 print($e->getMessage());
                 header('location: ' . BASE_URL . 'app/view/dashboard/agenda/FormAgenda.php');
 
