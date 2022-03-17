@@ -228,67 +228,75 @@
 }
 
 /*CARROSSEL*/
-/*.clients-picture {*/
-/*    width: 70px;*/
-/*    height: 70px;*/
-/*    margin: 0 auto;*/
-/*}*/
-/*.clients-picture img {*/
-/*    border-radius: 500px;*/
-/*}*/
-/*.clients-review {*/
-/*    display: none;*/
-/*}*/
-/*.clients-review p {*/
-/*    color: #333;*/
-/*    font-family: "Raleway", sans-serif;*/
-/*    font-size: 16px;*/
-/*    line-height: 26px;*/
-/*    text-align: center;*/
-/*}*/
-/*.clients-information {*/
-/*    display: none;*/
-/*    position: relative;*/
-/*    top: 30;*/
-/*    height: 200;*/
-/*}*/
-/*.clients-information h2 {*/
-/*    color: #1f61db;*/
-/*    font-size: 16px;*/
-/*    font-family: "Montserrat", sans-serif;*/
-/*    font-weight: 500;*/
-/*}*/
-/*.clients-information h3 {*/
-/*    color: #6c7078;*/
-/*    font-size: 16px;*/
-/*    font-family: "Montserrat", sans-serif;*/
-/*    font-weight: 300;*/
-/*    margin-top: 10px;*/
-/*    margin-bottom: 0;*/
-/*}*/
-/*.single-testimonial-area .owl-item.active.center .clients-picture {*/
-/*    width: 120px;*/
-/*    height: 120px;*/
-/*}*/
-/*.firstActiveItem .clients-picture {*/
-/*    width: 100;*/
-/*    height: 100;*/
-/*}*/
-/*.lastActiveItem .clients-picture {*/
-/*    width: 100;*/
-/*    height: 100;*/
-/*}*/
-/*.single-testimonial-area .owl-item.active.center .clients-review {*/
-/*    display: block;*/
-/*    width: 300%;*/
-/*    left: -100%;*/
-/*    position: relative;*/
-/*}*/
-/*.single-testimonial-area .owl-item.active.center .clients-information {*/
-/*    display: block;*/
-/*    text-align: center;*/
-/*}*/
-/*.single-testimonial-area .owl-item.active.center .clients-information h2 {*/
-/*    display: block;*/
-/*    text-align: center;*/
-/*}*/
+.clients-picture {
+   width: 70px;
+   height: 70px;
+   margin: 0 auto;
+}
+
+.clients-picture img {
+   border-radius: 500px;
+}
+
+.clients-review {
+   display: none;
+}
+
+.clients-review p {
+   color: #333;
+   font-family: "Raleway", sans-serif;
+   font-size: 16px;
+   line-height: 26px;
+   text-align: center;
+}
+
+.clients-information {
+   display: none;
+   position: relative;
+   top: 30;
+   height: 200;
+}
+
+.clients-information h2 {
+   color: #1f61db;
+   font-size: 16px;
+   font-family: "Montserrat", sans-serif;
+   font-weight: 500;
+}
+
+.clients-information h3 {
+    color: #6c7078;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.single-testimonial-area .owl-item.active.center .clients-picture {
+    width: 120px;
+    height: 120px;
+}
+.firstActiveItem .clients-picture {
+    width : 50px;
+    height: 50px;
+}
+.lastActiveItem .clients-picture {
+    width : 50px;
+    height: 50px;
+}
+.single-testimonial-area .owl-item.active.center .clients-review {
+    display: block;
+    width: 300%;
+    left: -100%;
+    position: relative;
+    margin-top: 18px;
+}
+.single-testimonial-area .owl-item.active.center .clients-information {
+    display: block;
+    text-align: center;
+}
+.single-testimonial-area .owl-item.active.center .clients-information h2 {
+    display: block;
+    text-align: center;
+}
