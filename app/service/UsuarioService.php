@@ -29,8 +29,7 @@ class UsuarioService {
                 $this->dao->fazerLogin($this->usuario);
                 header("Location: ../view/dashboard/indexDashboard.php");
             } catch (Exception $e) {
-                $_SESSION["erro_mensg"] = $e->getMessage();
-                header("Location: ../view/teste.php");
+                $_SESSION["erro_msg"] = $e->getMessage();
             }
         }
 

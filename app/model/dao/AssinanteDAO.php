@@ -34,7 +34,6 @@ class AssinanteDAO {
             '" . $assinante->getTelefone() . "', 
             '" . $assinante->getMensagem() . "', 
               NULL )";
-
             $statement = $this->conn->prepare($sql); // ou conn->prepare($sql);
             $statement->execute();
         } catch (Exception $e) {

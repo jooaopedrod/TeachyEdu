@@ -35,6 +35,14 @@ if (isset($_GET['delete_id'])) {
 </head>
 <body class="bodyFundo">
 <?php include("../../includes/sidebarAdmin.php"); ?>
+<?php if (!empty($_SESSION['suc_msg'])): ?>
+    <div class="container pt-5">
+        <div class="alert alert-success" role="alert">
+            <?php echo $_SESSION['suc_msg'] ?>
+            <?php unset($_SESSION['suc_msg']); ?>
+        </div>
+    </div>
+<?php endif; ?>
 <div>
     <div class="py-5">
         <div class="container">

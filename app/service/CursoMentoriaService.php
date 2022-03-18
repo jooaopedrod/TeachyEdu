@@ -67,6 +67,7 @@ class CursoMentoriaService {
                 $this->modulo->setCursoModulo($idCurso);
                 $this->daoModulo->criarModulo($this->modulo);
             }
+            $_SESSION['suc_msg'] = "Cadastrado com sucesso";
         } else if ($this->requisicao == "atualizarCurso") {
             $this->isCursoMentoriaEmpty();
             $this->cursoMentoria->setId($_POST["idCurso"]);
@@ -112,10 +113,7 @@ class CursoMentoriaService {
                 $this->modulo->setCursoModulo($idCurso);
                 $this->daoModulo->criarModulo($this->modulo);
             }
-
-        } else {
-            http_response_code(406);
-            throw new Exception("Falha ao carregar a imagem");
+            $_SESSION['suc_msg'] = "Atualizado com sucesso";
         }
     }
 
@@ -134,7 +132,7 @@ class CursoMentoriaService {
         }
         if (empty($_POST["valor"])) {
             http_response_code(406);
-            throw new Exception("Valor é obrigatório");
+            throw new Exception("Preço é obrigatório");
         }
     }
 }

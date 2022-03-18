@@ -1,4 +1,8 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 require_once __DIR__ . "/../model/dao/CursoMentoriaDAO.php";
 require_once __DIR__ . "/../model/CursoMentoria.php";
 require_once __DIR__ . "/../path.php";
@@ -264,9 +268,30 @@ if (isset($_GET['idCurso'])) {
         </div>
     </div>
 </div>
+<?php if (!empty($_SESSION['suc_msg'])): ?>
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header toastBg">
+                <img src="../../public/images/favicon.png" class="rounded me-2" width="24px" alt="...">
+                <strong class="me-auto">TeachyEdu </strong>
+                <small></small>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <?php echo $_SESSION['suc_msg'] ?>
+                <?php unset($_SESSION['suc_msg']); ?>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="../../public/javascript/javascript.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#toast').toast('show');
+    })
+</script>
 </body>
 </html>

@@ -48,10 +48,9 @@ if (isset($_GET['update_id'])) {
 
 <body>
 <?php include("../../includes/sidebarAdmin.php"); ?>
-<?php print_r($_SESSION); ?>
 
 <?php if (!empty($_SESSION['erro_msg'])): ?>
-    <div class="container">
+    <div class="container pt-5">
         <div class="alert alert-danger" role="alert">
             <?php echo $_SESSION['erro_msg'] ?>
             <?php unset($_SESSION['erro_msg']); ?>

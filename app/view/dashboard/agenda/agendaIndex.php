@@ -33,6 +33,14 @@ if (isset($_GET['delete_id'])) {
 </head>
 <body class="bodyFundo">
 <?php include("../../includes/sidebarAdmin.php"); ?>
+<?php if (!empty($_SESSION['suc_msg'])): ?>
+    <div class="container pt-5">
+        <div class="alert alert-success" role="alert">
+            <?php echo $_SESSION['suc_msg'] ?>
+            <?php unset($_SESSION['suc_msg']); ?>
+        </div>
+    </div>
+<?php endif; ?>
 <div>
     <div class="py-5">
         <div class="container">
@@ -90,19 +98,7 @@ if (isset($_GET['delete_id'])) {
         </div>
     </div>
 </div>
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-    <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header toastBg">
-            <img src="../../../../public/images/favicon.png" class="rounded me-2" width="24px" alt="...">
-            <strong class="me-auto">Ola, <?php echo $_SESSION['usuarioSessao']['nomeUsuario']?></strong>
-            <small></small>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-        <div class="toast-body">
-            Hello, world! This is a toast message.
-        </div>
-    </div>
-</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>

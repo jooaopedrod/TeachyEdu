@@ -2,7 +2,9 @@
 require_once __DIR__ . "/../model/dao/AssinanteDAO.php";
 require_once __DIR__ .  "/../model/Assinante.php";
 include("../path.php");
-
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 class AssinanteService {
 
@@ -24,7 +26,7 @@ class AssinanteService {
                 $this->assinante->setTelefone($_POST["telefoneAssinante"]);
                 $this->assinante->setMensagem($_POST["mensagemAssinante"]);
                 $this->dao->criarAssinanteFaq($this->assinante);
-                $_SESSION['suc_msg'] = 'Mensagem enviada com sucesso!';
+                $_SESSION['suc_msg'] = "Mensagem enviada com sucesso!";
                 header('location: ' . BASE_URL . 'app/view/FAQ.php');
             }catch (Exception $e){
                 print($e->getMessage());
@@ -37,7 +39,7 @@ class AssinanteService {
                 $this->assinante->setMensagem($_POST["mensagemAssinante"]);
                 $this->assinante->setInteresse($_POST["interesseAssinante"]);
                 $this->dao->criarAssinante($this->assinante);
-                $_SESSION['suc_msg'] = 'Mensagem enviada com sucesso!';
+                $_SESSION['suc_msg'] = 'Inscrição enviada com sucesso!';
                 header('location: ' . BASE_URL . 'app/view/cursoDetalhado-2.php?idCurso='.$this->assinante->getInteresse() );
             }catch (Exception $e){
                 print($e->getMessage());

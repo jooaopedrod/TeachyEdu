@@ -40,7 +40,7 @@ class AgendaDAO {
     }
     public function consultarAgendasComUsuario() {
         try {
-            $sql = "SELECT a.*, u.nomeUsuario FROM agendas a, usuarios u WHERE u.idUsuario = a.autorAgenda";
+            $sql = "SELECT a.*, u.nomeUsuario FROM agendas a, usuarios u WHERE u.idUsuario = a.autorAgenda ORDER BY a.idAgenda";
             $statement = $this->conn->prepare($sql);
             $statement->execute();
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);

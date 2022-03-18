@@ -21,6 +21,6 @@ if (isset($_POST["cursoMentoria_id"])) {
     $resultado .= '<a type="button"  href="cursoMentoriaIndex.php?delete_id='. $cursoModal['idCursoMentoria'].'" class="btn btn-danger">Excluir</a>';
     $resultado .= '</div>';
 
+    $_SESSION['suc_msg'] = "Cadastrado com sucesso";
     echo $resultado;
-
 }

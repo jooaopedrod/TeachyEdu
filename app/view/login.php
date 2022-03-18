@@ -1,3 +1,9 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,6 +31,10 @@
 
         <div class="footer">
             <span><a href="esqueceuASenha.php">Esqueceu a senha?</a></span>
+            <?php if (!empty($_SESSION['erro_msg'])): ?>
+                        <?php echo $_SESSION['erro_msg'] ?>
+                        <?php unset($_SESSION['erro_msg']); ?>
+            <?php endif; ?>
         </div>
     </main>
 </body>

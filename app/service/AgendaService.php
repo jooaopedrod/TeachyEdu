@@ -45,11 +45,10 @@ class AgendaService {
                 $this->agenda->setImagem($imagemAgenda);
                 $this->agenda->setUsuario($_SESSION['usuarioSessao']['idUsuario']);
                 $this->dao->criarAgenda($this->agenda);
-                $_SESSION['suc_msg'] = "cadastrada com susseso";
-                header('location: ' . BASE_URL . 'app/view/dashboard/agenda/agendaIndex.php?acao=cadastro-sucesso');
+                $_SESSION['suc_msg'] = "cadastrada com sucesso!";
+                header('location: ' . BASE_URL . 'app/view/dashboard/agenda/agendaIndex.php');
             } catch (Exception $e) {
                 $_SESSION["erro_msg"] = $e->getMessage();
-                print($e->getMessage());
                 header('location: ' . BASE_URL . 'app/view/dashboard/agenda/FormAgenda.php');
 
             }
@@ -76,10 +75,11 @@ class AgendaService {
                 }
                 $this->agenda->setUsuario($_SESSION['usuarioSessao']['idUsuario']);
                 $this->dao->atualizarAgenda($this->agenda);
-                $_SESSION['suc_msg'] = "Atualizada com susseso";
+                $_SESSION['suc_msg'] = "Atualizada com sucesso";
                 header('location: ' . BASE_URL . 'app/view/dashboard/agenda/agendaIndex.php');
             } catch (Exception $e) {
-                $_SESSION["erro_mensg"] = $e->getMessage();
+                $_SESSION["erro_msg"] = $e->getMessage();
+                header('location: ' . BASE_URL . 'app/view/dashboard/agenda/FormAgenda.php?update_id='.$_POST['idAgenda']);
             }
         }
     }
