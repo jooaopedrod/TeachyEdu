@@ -109,8 +109,7 @@ class AgendaDAO {
         }
     }
 
-    public
-    function excluirAgenda($id) {
+    public function excluirAgenda($id) {
         try {
             $sql = "DELETE FROM `agendas` WHERE idAgenda = $id";
             $statement = $this->conn->prepare($sql);

@@ -151,3 +151,38 @@ form .btnEmail {
     border-radius: 4px;
     transition: all 0.3s ease;
 }
+
+/*ERRO*/
+.input-field-erro {
+    position: relative;
+}
+
+form .input-field-erro:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.input-field-erro .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: lightcoral;
+}
+
+
+.input-field-erro input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+.input-field-erro input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+.input-field-erro input::placeholder {
+    color: lightcoral;
+}

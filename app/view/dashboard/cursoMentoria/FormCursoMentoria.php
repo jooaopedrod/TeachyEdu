@@ -40,7 +40,7 @@ if (isset($_GET['update_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Dashboard | Gerenciar Cursos</title>
+    <title>Dashboard | Gerenciar Cursos e Mentorias</title>
     <link rel="icon" sizes="500x500" href="../../../../public/images/favicon.png">
     <link rel="stylesheet" href="../../../../public/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -151,7 +151,7 @@ if (isset($_GET['update_id'])) {
                                 <tr class="table-danger">
                                     <th>ID</th>
                                     <th>Nome</th>
-                                    <th>Descrição</th>
+                                    <th class="col-md-8">Descrição</th>
                                     <th>Ações</th>
                                 </tr>
                                 </thead>
@@ -160,7 +160,7 @@ if (isset($_GET['update_id'])) {
                                     <tr>
                                         <td><input name="id" type="hidden">#</td>
                                         <td><input class="form-control" name="nome" type="text"></td>
-                                        <td><input class="form-control" name="descricao" type="text"></td>
+                                        <td><textarea class="form-control" name="descricaoM"></textarea></td>
                                         <td><span class="deleteRow fa fa-trash text-danger"></span></td>
                                     </tr>
                                 <?php } ?>
@@ -168,7 +168,7 @@ if (isset($_GET['update_id'])) {
                                     <tr>
                                         <td><input class="form-control" name="id" value="<?php echo $modulo['idModulo'] ?>" type="hidden">#</td>
                                         <td><input class="form-control" name="nome" value="<?php echo $modulo['nomeModulo'] ?>" type="text"></td>
-                                        <td><input class="form-control" name="descricao" value="<?php echo $modulo['descricaoModulo'] ?>" type="text"></td>
+                                        <td><textarea class="form-control" name="descricaoM"><?php echo $modulo['descricaoModulo'] ?></textarea></td>
                                         <td><span class="deleteRow fa fa-trash text-danger"></span></td>
                                     </tr>
                                 <?php } ?>
@@ -198,7 +198,7 @@ if (isset($_GET['update_id'])) {
             var cell4 = row.insertCell(0);
             cell4.innerHTML = '<input name="id"  type="hidden">#';
             cell3.innerHTML = '<input class="form-control" name="nome" type="text">';
-            cell2.innerHTML = '<input class="form-control" name="descricao"  type="text">';
+            cell2.innerHTML = '<textarea class="form-control" name="descricaoM"> </textarea>';
             cell1.innerHTML = '<span class="deleteRow fa fa-trash text-danger"></span>';
 
             $(".deleteRow").click(function () {
@@ -242,7 +242,7 @@ if (isset($_GET['update_id'])) {
                 var nome = inputName[0].value;
 
                 var tdDescricao = trs.cells[2];
-                var inputDescricao = tdDescricao.getElementsByTagName('input');
+                var inputDescricao = tdDescricao.getElementsByTagName('textarea');
                 var descricao = inputDescricao[0].value;
 
                 modulos[i - 1] = {"id": id, "nome": nome, "descricao": descricao};

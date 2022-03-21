@@ -4,6 +4,7 @@ require_once __DIR__ . "/../model/Usuario.php";
 require_once('../src/PHPMailer.php');
 require_once('../src/SMTP.php');
 require_once('../src/Exception.php');
+require_once __DIR__ . "/../path.php";
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -51,7 +52,7 @@ class UsuarioService {
                 header("Location: ../view/dashboard/usuario/usuarioIndex.php");
 
             } catch (Exception $e) {
-
+                $_SESSION["erro_msg"] = $e->getMessage();
             }
         }
         if ($this->requisicao == "CadastrarSenha") {
@@ -63,27 +64,28 @@ class UsuarioService {
             session_unset();
             header("Location: ../view/dashboard/indexDashboard.php");
         }
-//        if ($this->requisicao == "recuperarSenha") {
-//            //"SELECT * FROM `usuario`"
-//        }
         if ($this->requisicao == "sair") {
             unset($_SESSION['usuarioSessao']);
             header("Location: ../view/index.php");
         }
         if ($this->requisicao == "Continuar") {
-            $editor = $this->dao->consutarEditorPorEmail($_POST['email']);
-            if (empty($this->usuario)){
-                throw new \Exception('Usuario não encontrado');
-            }else{
-                $this->usuario->setId($editor['idUsuario']);
-                $this->usuario->setToken($this->gerarToken());
-                $date = new DateTime();
-                $date->add(new DateInterval('P1D'));
-                $this->usuario->setValidadeToken($date->format('Y-m-d H:i:s'));
-                $this->usuario->setValidacaoToken(0);
-                $this->dao->novaSenha($this->usuario);
-                $this->emailSenha($_POST['email'], $this->usuario->getToken());
-                header("Location: ../view/login.php");
+            try {
+                $editor = $this->dao->consutarEditorPorEmail($_POST['email']);
+                if (empty($editor)) {
+                    throw new \Exception('E-mail não encontrado');
+                } else {
+                    $this->usuario->setId($editor['idUsuario']);
+                    $this->usuario->setToken($this->gerarToken());
+                    $date = new DateTime();
+                    $date->add(new DateInterval('P1D'));
+                    $this->usuario->setValidadeToken($date->format('Y-m-d H:i:s'));
+                    $this->usuario->setValidacaoToken(0);
+                    $this->dao->novaSenha($this->usuario);
+                    $this->emailSenha($_POST['email'], $this->usuario->getToken());
+                    header("Location: ../view/login.php");
+                }
+            } catch (Exception $e) {
+                $_SESSION["erro_msg"] = $e->getMessage();
             }
         }
     }

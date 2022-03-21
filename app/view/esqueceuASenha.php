@@ -1,3 +1,8 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
     <title>TeachyEdu - Esqueceu a senha</title>
+    <link rel="icon" sizes="500x500" href="../../public/images/favicon.png">
     <link rel="stylesheet" href="../../public/css/styleLogin.css">
 </head>
 <body>

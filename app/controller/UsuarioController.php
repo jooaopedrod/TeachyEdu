@@ -12,5 +12,4 @@ try {
 } catch (Exception $e) {
     $_SESSION["erro_msg"] = $e->getMessage();
     header('location: ' . BASE_URL . 'app/view/login.php');
-
 }

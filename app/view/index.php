@@ -165,13 +165,9 @@ if (isset($_POST["agenda_id"])) {
         font-style: normal;
     }
 
-    .tituloConheca {
-        font-weight: bold;
-        font-size: 3.4rem;
-    }
 </style>
 
-<body>
+<body >
 
 <?php include("includes/nav.php"); ?>
 
@@ -209,6 +205,16 @@ if (isset($_POST["agenda_id"])) {
 
 <br>
 <br>
+<div class="pt-3 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Formados pela TeachyEdu</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- carossel-->
 <div class="container">
 
@@ -331,7 +337,7 @@ if (isset($_POST["agenda_id"])) {
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h1 class="text-light section-heading tituloConheca">Por que escolher a TeachyEdu?<br></h1>
+                <h1 class="text-light ">Por que escolher a TeachyEdu?<br></h1>
                 <p class="my-4"></p>
             </div>
         </div>

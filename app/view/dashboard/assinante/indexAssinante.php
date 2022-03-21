@@ -19,6 +19,7 @@ $assinantes = $dao->consultarAssinantesComInteresse();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Dashboard | Gerenciar Assinantes</title>
+    <link rel="icon" sizes="500x500" href="../../../../public/images/favicon.png">
     <link rel="stylesheet" href="../../../../public/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">

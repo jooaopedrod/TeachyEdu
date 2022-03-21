@@ -12,7 +12,8 @@ LoginFilterService::isLogged();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Dashboard | Gerenciar Assinantes</title>
+    <title>Dashboard | TeachyEdu</title>
+    <link rel="icon" sizes="500x500" href="../../../public/images/favicon.png">
     <link rel="stylesheet" href="../../../public/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
@@ -70,7 +71,7 @@ LoginFilterService::isLogged();
                     <div class="card project-card shadow rounded">
                         <img class="card-img rounded" src="../../../public/images/fundoBranco.png" alt="Card image">
                         <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                            <h4 class="text-primary text-center fonteIcone"><i class="bx bx-pencil"></i><br>Cursos e mentoria</h4>
+                            <h4 class="text-primary text-center fonteIcone"><i class="bx bx-pencil"></i><br>Cursos e mentorias</h4>
                         </div>
                     </div>
                 </a>

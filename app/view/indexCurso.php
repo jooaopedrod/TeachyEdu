@@ -154,7 +154,8 @@ if (isset($_GET['filtro'])) {
         }
 
         .project-card:hover {
-            box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.5), 0 4px 20px 0 rgba(0, 0, 0, 0.49);
+            box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.5), 0 4px 20px 0 rgba(0, 0, 0, 0.49) !important;
+            border: none;
         }
 
         .font {
